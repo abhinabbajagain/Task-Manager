@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "./ui/button";
 
 interface Props {
@@ -11,8 +10,8 @@ interface Props {
 
 function TaskItems({ id, title, completed, onToggle, onDelete }: Props) {
   return (
-    <div className="flex item-center justify-between p-3 border rounded-lg">
-      <div className="flex item-center gap-2">
+    <div className="flex items-center justify-between p-3 border rounded-lg">
+      <div className="flex items-center gap-2">
         <input type="checkbox" checked={completed} onChange={() => onToggle(id)} />
       </div>
       <span className={completed ? "line-through text-gray-500" : ""}>

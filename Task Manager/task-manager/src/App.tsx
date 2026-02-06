@@ -17,7 +17,7 @@ function App() {
     );
   };
   const deleteTask = (id: number) => {
-    setTask((prev) => prev.filter((task) => task.id != id));
+    setTask((prev) => prev.filter((task) => task.id !== id));
   };
 
   const completedConst =task.filter((t)=> t.complete).length;

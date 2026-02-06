@@ -1,5 +1,4 @@
 import type { Task } from "@/types/tasks";
-import React from "react";
 import TaskItems from "./TaskItems";
 
 interface Props {
@@ -13,6 +12,7 @@ function TaskList({ tasks, onToggle, onDelete }: Props) {
     <div>
       {tasks.map((t) => (
         <TaskItems
+          key={t.id}
           onToggle={onToggle}
           onDelete={onDelete}
           id={t.id}

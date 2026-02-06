@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Input } from './ui/input'
 import { Button } from './ui/button';
 interface Props {
@@ -6,7 +6,7 @@ interface Props {
 }
 
 function TaskInput({onAdd}: Props) {
-    const [ value, setValue] = useState(" ");
+    const [ value, setValue] = useState("");
     const handleAdd =() => {
         if (!value.trim()) return;
         onAdd(value);
